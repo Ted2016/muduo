@@ -103,7 +103,7 @@ inline To implicit_cast(From const &f)
 //    if (dynamic_cast<Subclass2>(foo)) HandleASubclass2Object(foo);
 // You should design the code some other way not to need this.
 
-template<typename To, typename From>     // use like this: down_cast<T*>(foo);
+template<typename To, typename From>     // use like this: down_cast<T*>(foo), foo is a pointer.
 inline To down_cast(From* f)                     // so we only accept pointers
 {
   // Ensures that To is a sub-type of From *.  This test is here only
